@@ -1,0 +1,577 @@
+/* Google Fonts Start */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto+Slab:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap');
+/* Google Fonts End */
+
+/* <<<<<<<< Root Css Start >>>>>>>> */
+:root{
+    --roboto_condensed:'Roboto Condensed', sans-serif;
+    --Roboto-Slab:'Roboto Slab', sans-serif;
+    --Roboto-Regular:'Roboto', sans-serif;
+    --hover-color:#28b8d8;
+    --section-bg-color:#f9f9f9;
+    --heading-color-1:#444444;
+    --heading-color-3:#d5d5d5;
+    --heading-color-4:#f0f0f0;
+    --paragraph-color-1:#666666;
+    --paragraph-color-2:#cacaca;
+    --paragraph-color-3:#929292;
+    --paragraph-color-4:#999999;
+    
+}
+/* <<<<<<<< Root Css End >>>>>>>> */
+
+
+/* <<<<<<<< All Common Css Start >>>>>>>> */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    vertical-align: middle;
+}
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+}
+.w-100{
+    width: 100%;
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: red;
+}
+h1,h3,h4,h5,h6{
+    font-family: var(--roboto_condensed);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+h2{
+    font-family: var(--Roboto-Slab);
+    font-weight: 700;
+}
+p{
+    font-family: var(--Roboto-Regular);
+    font-weight: 400;
+    font-size: 14px;
+    color:var(--paragraph-color-1) ;
+}
+.container{
+    width: 1170px;
+    margin: 0 auto;
+}
+html{
+    scroll-behavior: smooth;
+}
+.top{
+    width: 30px;
+    height: 30px;
+    background: #28b8d8;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: all linear .3s;
+}
+.top a{
+    color: #fff;
+}
+.top.topbtn{
+    opacity: 1;
+    visibility: visible;
+
+}
+/* <<<<<<<< All Common Css End >>>>>>>> */
+
+/* <<<<<<<< Navbar Css Start >>>>>>>> */
+#navbar{
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+}
+#navbar.sticky_menu{
+    position: fixed;
+    animation-name: sticky;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    background:#444444;
+    transition: all linear.3s;
+}
+@keyframes sticky{
+    0%{
+        top:-100px;
+    }
+    100%{
+        top:0;
+    }
+}
+#navbar .menu_main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:40px 0;
+}
+#navbar .menu_main .logo{
+    width: 110px;
+}
+#navbar .menu_main .menu{
+    width:530px ;
+}
+#navbar .menu_main .menu ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#navbar .menu_main .menu ul li a{
+    text-transform: uppercase;
+    font-family: var(--roboto_condensed);
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;  
+    transition: all linear .2s;  
+}
+#navbar .menu_main .menu ul li a.active{
+    color: var(--hover-color);
+}
+#navbar .menu_main .menu ul li:hover a{
+    color: var(--hover-color);    
+}
+/* <<<<<<<< Navbar Css End >>>>>>>> */
+
+/* <<<<<<<< Banner Css Start >>>>>>>> */
+#banner{
+    background: url(../images/Banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 310px 0 220px;
+    position: relative;
+}
+.banner_main{
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+}
+.banner_main h1{
+    font-weight: 700;
+    font-size: 50px;
+}
+.banner_main h2{
+    font-size: 40px;
+    font-weight: 300;
+    padding: 20px 0;
+}
+.banner_main p{
+    font-weight: 300;
+    color: #fff;
+}
+/* <<<<<<<< Banner Css End >>>>>>>> */
+
+/* <<<<<<<< Service Css Start >>>>>>>> */
+#service{
+    background: var(--section-bg-color);
+}
+.service_main{
+    padding: 80px 0;
+}
+.service_main .service_heading{
+    text-align: center;
+    padding-bottom: 80px;
+}
+.service_main .service_heading h2{
+    font-size: 30px;
+    color: var(--heading-color-1);
+    font-weight: 300;
+}
+.service_main .service_heading p{
+    padding-top: 30px;
+    color: var(--paragraph-color-1);
+}
+.service_main .service_info{
+    text-align: center;
+}
+.service_main .service_info .heading{
+    font-size: 18px;
+    color:var(--heading-color-1) ;
+    padding-bottom: 30px;
+}
+.service_main .service_info .service_gallary{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.service_main .service_info .service_gallary .item{
+    width: 370px;
+    padding: 16px;
+    border: 1px solid #e3e3e3;
+    transition: all linear .2s;
+    background: #fff;
+}
+.service_main .service_info .service_gallary .item .info{
+    padding: 25px 0 9px;
+}
+.service_main .service_info .service_gallary .item .info h2{
+    padding-bottom:20px ;
+    color: var(--heading-color-1);
+    font-size: 17px;
+}
+.service_main .service_info .service_gallary .item:hover{
+    transform: scale(1.08);
+    
+}
+/* <<<<<<<< Service Css End >>>>>>>> */
+
+/* <<<<<<<< Instagram Css Start >>>>>>>> */
+#instagram{
+    background: #2c2c2c;
+    padding: 50px 0;
+}
+#instagram .insta_main{
+    text-align: center;
+}
+#instagram .insta_main .heading{
+    font-size: 18px;
+    color:var(--heading-color-3) ;
+}
+#instagram .insta_main .image{
+    padding: 40px 0 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#instagram .insta_main .image img{
+    transition: all linear .3s;
+    cursor: pointer;
+}
+#instagram .insta_main .image img:hover{
+    transform: scale(1.08);
+}
+#instagram .insta_main .button{
+    width: 200px;
+    margin: 0 auto;
+}
+#instagram .insta_main .button a{
+    color: #a6a6a6;
+    text-transform: uppercase;
+    font-size: 14px;
+    border: 1px solid #a6a6a6;
+    padding: 16px;
+    transition: all linear .3s;
+
+}
+#instagram .insta_main .button:hover a{
+    letter-spacing: 1px;
+
+}
+#instagram .insta_main .heading h3{
+    font-size: 18px;
+    position: relative;
+    
+}
+#instagram .insta_main .heading h3::before{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 1px;
+    top:50%;
+    left: 40%;
+    background: #535353;
+    transform: translate(-50%);
+
+}
+#instagram .insta_main .heading h3::after{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 1px;
+    top:50%;
+    right: 40%;
+    background: #535353;
+    transform: translate(50%);
+
+}
+/* <<<<<<<< Instagram Css End >>>>>>>> */
+
+/* <<<<<<<< Journal Css Start >>>>>>>> */
+#journal{
+    background:var(--section-bg-color) ;
+    padding: 80px 0;
+}
+#journal .journal_main .heading{
+    padding-bottom: 30px;
+    
+}
+#journal .journal_main .heading h3{
+    text-align: center;
+    font-size: 18px;
+    color: var(--heading-color-1);
+    position: relative;
+
+}
+#journal .journal_main .heading h3::before{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 1px;
+    top:50%;
+    left: 36%;
+    background: #d9d9d9;
+    transform: translate(-36%);
+}
+#journal .journal_main .heading h3::after{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 1px;
+    top:50%;
+    right: 36%;
+    background: #d9d9d9;
+    transform: translate(36%);
+}
+.journal_gallary {
+    display: flex;
+    justify-content:space-between;
+}
+.journal_gallary .item{
+    width: 370px;
+    border: 1px solid #e3e3e3;
+    transition: all linear .3s;
+    background: #fff;
+}
+.journal_gallary .item:hover{
+    transform: scale(1.08);
+}
+.journal_gallary .item .info{
+    text-align: center;
+    padding: 25px 0;
+}
+.journal_gallary .item .info h2{
+    font-size: 16px;
+    color: var(--heading-color-1);
+    padding-bottom: 12px;
+}
+.journal_gallary .item .info p{
+    font-size: 12px;
+    color: var(--paragraph-color-4);
+}
+.journal_gallary .item .content p{
+    padding: 25px;
+    
+}
+.journal_gallary .item .button{
+    padding: 25px;
+    display: flex;
+    align-items: center;
+}
+.journal_gallary .item .button .btn{
+    width: 50%;
+}
+.journal_gallary .item .button .btn a{
+    text-decoration-color:var(--hover-color) ;
+    color:var(--paragraph-color-4) ;
+    border-bottom: 1px solid var(--hover-color);
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    font-family: var(--Roboto-Regular);
+    font-size: 11px;
+    transition: all linear.3s;
+}
+.journal_gallary .item .button .btn a:hover{
+    color: #666666;
+}
+.journal_gallary .item .react{
+    width: 50%;
+    text-align: right;
+}
+.journal_gallary .item .react a{
+    color: #000;
+    font-family: var(--Roboto-Regular);
+    font-size: 11px;
+}
+.journal_gallary .item .react a:focus{
+    color: red;
+}
+/* <<<<<<<< Journal Css End >>>>>>>> */
+
+/* <<<<<<<< About Me Css Start >>>>>>>> */
+#about{
+    background:var(--section-bg-color);
+    padding-bottom: 80px ;
+}
+#about .about_me_main{
+    display: flex;
+    justify-content: space-between;
+}
+.about_me_main .about_me_heading{
+    max-width: 570px;
+
+}
+.about_me_main .about_me_heading h3{
+    padding-bottom: 30px;
+    color: var(--heading-color-1);
+    position: relative;
+    text-transform: uppercase;
+       
+}
+.about_me_main .my_service .service_heading h3{
+    padding-bottom: 30px;
+    color: var(--heading-color-1);
+    position: relative;
+    text-transform: uppercase;
+}
+.about_me_main .about_me_heading h3::after{
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    width: 100px;
+    height: 1px;
+    background: #d9d9d9;
+       
+}
+.about_me_main .my_service .service_heading h3::after{
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 21%;
+    width: 100px;
+    height: 1px;
+    background: #d9d9d9;
+}
+.about_me_heading .about_me_content{
+    display: flex;
+    gap: 30px;
+}
+.about_me_heading .about_me_content .info h2{
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--paragraph-color-1);
+    padding-bottom: 30px;
+    line-height: 28px;
+}
+.about_me_heading .about_me_content .info p{
+    line-height: 24px;
+}
+.about_me_main .my_service{
+    max-width: 570px;
+}
+
+.service_heading .item{
+    display: flex;
+    gap: 30px;
+}
+.service_heading .item .icon{
+    font-size: 40px;
+    color: var(--hover-color);
+}
+.service_heading .item .info h2{
+    font-size: 17px;
+    color:var(--heading-color-1);
+    padding-bottom:15px ;
+}
+.service_heading .item .info p{
+    padding-bottom:25px ;
+}
+/* <<<<<<<< About Me Css End >>>>>>>> */
+
+/* <<<<<<<< Footer Css Start >>>>>>>> */
+#footer{
+    background: #373737;
+    padding: 80px 0 160px;
+    position: relative;
+}
+#footer .footer_main{
+    display: flex;
+    justify-content: space-between;
+}
+#footer .footer_main .footer_info{
+    width: 260px;
+}
+.footer_main .footer_info .heading h3{
+    font-size: 16px;
+    color: var(--heading-color-4);
+    padding-bottom: 20px;
+}
+.footer_main .footer_info .info p{
+    color: var(--paragraph-color-2);
+    padding-bottom:30px;
+}
+.footer_main .footer_info .info .item a{
+    font-size: 14px;
+    color: var(--paragraph-color-2);
+    font-family: var(--Roboto-Regular);
+    font-weight: 400;
+    display: flex;
+    gap: 15px;
+    padding: 8px 0;
+}
+.footer_main .footer_info .info .item a:hover i{
+    color: var(--hover-color);
+}
+.footer_main .footer_info .twitter_info .post p{
+    color: var(--paragraph-color-2);
+    margin-bottom: 35px;
+    transition: all linear.3s;
+}
+.footer_main .footer_info .twitter_info .post p:hover{
+    color: var(--hover-color);
+}
+.footer_main .footer_info .popular_post_info .post{
+    color: var(--paragraph-color-2);
+    margin-bottom: 30px;
+    transition: all linear.3s;
+}
+.footer_main .footer_info .popular_post_info .post p{
+    color: var(--paragraph-color-2);
+    transition: all linear.3s;
+}
+.footer_main .footer_info .popular_post_info .post:hover p{
+    color:#fff;
+}
+.footer_main .footer_info .popular_post_info .post .date{
+    color: var(--paragraph-color-3);
+    transition: all linear.3s;
+    padding: 5px 0;
+    font-family: var(--Roboto-Regular);
+    font-weight: 400;
+    font-size: 12px;
+}
+.footer_main .footer_info .popular_post_info .post:hover .date{
+    color:#b8b8b8;
+    
+}
+.footer_main .footer_info .about_info p{
+    color: var(--paragraph-color-2);
+    padding-bottom: 30px;
+}
+/* <<<<<<<< Footer Css End >>>>>>>> */
+
+/* <<<<<<<< Copyright Css Start >>>>>>>> */
+#copyright{
+    background: #333333;
+    padding: 40px 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+#copyright .container p{
+    color: var(--paragraph-color-2);
+}
+/* <<<<<<<< Copyright Css End >>>>>>>> */
+
+
+
